@@ -103,6 +103,23 @@ strong { color: #fff; }
   transition: color var(--t-fast), background var(--t-fast);
 }
 .nav a:hover { color: #fff; background: rgba(255,255,255,0.05); }
+.topbar-right { display: flex; align-items: center; gap: 10px; }
+.topbar-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px;
+  border-radius: 8px;
+  color: var(--text-2);
+  border: 1px solid var(--border-1);
+  transition: all var(--t-fast);
+}
+.topbar-icon svg { width: 18px; height: 18px; }
+.topbar-icon:hover {
+  color: #fff;
+  background: var(--red-soft);
+  border-color: rgba(196,25,43,0.35);
+  transform: translateY(-1px);
+}
+
 .lang-switch { display: flex; gap: 4px; }
 .lang-btn {
   padding: 6px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
