@@ -9,7 +9,7 @@ window.SITE_I18N = {
     'nav.about':          'About',
 
     'hero.badge':         'FAN-MADE LAUNCHER · MIT',
-    'hero.sub':           'A SORDID TOWN FULL OF SECRETS',
+    'hero.sub':           'BEST GAME OF ALL TIME',
     'hero.tagline':       'One LAUNCH click instead of an hour-long ritual with DPfix, 4GB Patch and DXVK. The launcher fetches and configures everything for you.',
     'hero.download':      'DOWNLOAD',
     'hero.viewRepo':      'View on GitHub',
@@ -72,7 +72,7 @@ window.SITE_I18N = {
     'nav.about':          'Про проєкт',
 
     'hero.badge':         'ФАНАТСЬКИЙ ЛАУНЧЕР · MIT',
-    'hero.sub':           'A SORDID TOWN FULL OF SECRETS',
+    'hero.sub':           'BEST GAME OF ALL TIME',
     'hero.tagline':       'Одне натискання LAUNCH замість години ритуалу з DPfix, патчем 4GB і DXVK. Лаунчер сам завантажує і налаштовує все необхідне.',
     'hero.download':      'ЗАВАНТАЖИТИ',
     'hero.viewRepo':      'Дивитись на GitHub',
