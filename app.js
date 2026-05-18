@@ -6,7 +6,7 @@
  *   3. Persists language choice via localStorage
  */
 
-const REPO = 'LittleBitUA/DP1-Launcher';
+const REPO = 'dplauncher/DP1-Launcher';
 
 function detectInitialLang() {
   const saved = localStorage.getItem('lang');
