@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DP1 Launcher — Deadly Premonition: The Director's Cut</title>
+  <meta name="description" content="A modern fan-made launcher for Deadly Premonition: The Director's Cut. One LAUNCH click instead of an hour-long ritual with DPfix, 4GB Patch and DXVK.">
+
+  <meta property="og:title" content="DP1 Launcher — Deadly Premonition">
+  <meta property="og:description" content="Fan-made launcher · Auto-install DPFix, 4GB Patch, DXVK · Liquid-glass UI · UA + EN">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="preconnect" href="https://api.github.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-lang="en">
+
+  <div class="bg">
+    <div class="bg-image"></div>
+    <div class="bg-rain"></div>
+    <div class="bg-gradient"></div>
+    <div class="bg-vignette"></div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#top">
+      <img src="logo.png" alt="DP1" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-title">DP1</span>
+        <span class="brand-sub">LAUNCHER</span>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="#features"   data-i18n="nav.features">Features</a>
+      <a href="#components" data-i18n="nav.components">Components</a>
+      <a href="#install"    data-i18n="nav.install">Install</a>
+      <a href="#about"      data-i18n="nav.about">About</a>
+    </nav>
+    <div class="lang-switch">
+      <button class="lang-btn" data-set-lang="en">EN</button>
+      <button class="lang-btn" data-set-lang="uk">UK</button>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="badge" data-i18n="hero.badge">FAN-MADE LAUNCHER · MIT</div>
+      <h1 class="hero-title">
+        <span class="hero-line">DEADLY</span>
+        <span class="hero-line">PREMONITION</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero.sub">A SORDID TOWN FULL OF SECRETS</p>
+
+      <p class="hero-tagline" data-i18n="hero.tagline">
+        One LAUNCH click instead of an hour-long ritual with DPfix, 4GB Patch and DXVK.
+        The launcher fetches and configures everything for you.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn-launch" id="download-btn" href="https://github.com/LittleBitUA/DP1-Launcher/releases/latest" target="_blank" rel="noopener">
+          <span class="btn-launch-glow"></span>
+          <span class="btn-launch-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="btn-launch-label" id="download-label" data-i18n="hero.download">DOWNLOAD</span>
+          <span class="btn-launch-meta" id="download-meta">— · Latest</span>
+        </a>
+        <a class="btn-secondary" href="https://github.com/LittleBitUA/DP1-Launcher" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.9 1.2 2 1.2 3.2 0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/>
+          </svg>
+          <span data-i18n="hero.viewRepo">View on GitHub</span>
+        </a>
+      </div>
+
+      <div class="hero-meta">
+        <span class="hero-dot"></span>
+        <span data-i18n="hero.ready">Game Ready</span>
+        <span class="hero-sep">·</span>
+        <span data-i18n="hero.os">Windows 10 / 11 · x64</span>
+        <span class="hero-sep">·</span>
+        <span data-i18n="hero.langs">UA + EN</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <header class="section-head">
+      <span class="section-eyebrow" data-i18n="features.eyebrow">EVERYTHING IT DOES</span>
+      <h2 class="section-title" data-i18n="features.title">A launcher built for one game — done right</h2>
+    </header>
+
+    <div class="grid grid-3">
+      <article class="glass-card feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l12-7z"/></svg>
+        </div>
+        <h3 data-i18n="features.launch.title">Steam launch</h3>
+        <p data-i18n-html="features.launch.desc">One red LAUNCH button. Routes through <code>steam://run/247660</code> so achievements, hours and overlay keep working.</p>
+      </article>
+
+      <article class="glass-card feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>
+        </div>
+        <h3 data-i18n="features.autoSetup.title">Auto setup</h3>
+        <p data-i18n-html="features.autoSetup.desc">First run downloads and installs DPFix, 4GB LAA Patch and DXVK 2.7.1 into the game folder. No manuals, no Reddit threads.</p>
+      </article>
+
+      <article class="glass-card feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </div>
+        <h3 data-i18n="features.detect.title">Steam library autodetect</h3>
+        <p data-i18n-html="features.detect.desc">Reads the Steam registry path and parses <code>libraryfolders.vdf</code>, so it finds the game even across multiple drives.</p>
+      </article>
+
+      <article class="glass-card feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M3 18l5-5 4 4 5-5 4 4"/></svg>
+        </div>
+        <h3 data-i18n="features.ini.title">DPfix.ini editor</h3>
+        <p data-i18n-html="features.ini.desc">All the DPfix knobs in a real UI: AA, shadows, SSAO, DoF, reflections, custom resolutions, refresh rate, display mode.</p>
+      </article>
+
+      <article class="glass-card feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8M7 3v5h8"/></svg>
+        </div>
+        <h3 data-i18n="features.saves.title">Save backups</h3>
+        <p data-i18n-html="features.saves.desc">Auto-backs up <code>dp.sav</code> every 2 minutes. One-click restore with a confirm dialog. Never lose progress to a crash again.</p>
+      </article>
+
+      <article class="glass-card feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+        </div>
+        <h3 data-i18n="features.compat.title">Windows compatibility</h3>
+        <p data-i18n-html="features.compat.desc">Toggle <strong>XP SP3</strong> or <strong>Windows 98 / Me</strong> for both <code>DP.exe</code> and <code>DPLauncher.exe</code> via registry. One click.</p>
+      </article>
+
+      <article class="glass-card feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.5 0 4.7 1 6.3 2.7"/><path d="M21 3v6h-6"/></svg>
+        </div>
+        <h3 data-i18n="features.update.title">In-app auto-update</h3>
+        <p data-i18n="features.update.desc">When a new release lands on GitHub, the launcher downloads the ZIP, replaces files, restarts. No manual reinstall.</p>
+      </article>
+
+      <article class="glass-card feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 13h6M7 16h4"/></svg>
+        </div>
+        <h3 data-i18n="features.news.title">News from GitHub</h3>
+        <p data-i18n-html="features.news.desc">A <code>news.json</code> in the repo feeds the LATEST NEWS card. Updates ship instantly to every installed launcher.</p>
+      </article>
+
+      <article class="glass-card feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+        </div>
+        <h3 data-i18n="features.i18n.title">Two languages</h3>
+        <p data-i18n="features.i18n.desc">Українська та English. Toggle in Settings → General — every label, tooltip, tip and modal swaps live.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="components">
+    <header class="section-head">
+      <span class="section-eyebrow" data-i18n="components.eyebrow">STANDING ON THE SHOULDERS</span>
+      <h2 class="section-title" data-i18n="components.title">Components used</h2>
+      <p class="section-lead" data-i18n="components.lead">DP1 Launcher is a wrapper that automates these projects. All credit for the actual fixes belongs to their authors.</p>
+    </header>
+
+    <div class="grid grid-3">
+      <article class="glass-card credit">
+        <div class="credit-tag">v0.9.5</div>
+        <h3>DPFix</h3>
+        <p class="credit-by">Peter «Durante» Thoman</p>
+        <p data-i18n="components.dpfix">The legendary graphics fix — custom resolutions, anti-aliasing, real shadows, SSAO, UI scaling. Without DPFix the PC port is unplayable.</p>
+      </article>
+
+      <article class="glass-card credit">
+        <div class="credit-tag">LAA</div>
+        <h3>4GB Patch</h3>
+        <p class="credit-by">NTCore (Daniel Pistelli)</p>
+        <p data-i18n-html="components.fourgb">Flips the LAA flag on <code>DP.exe</code>, lifting the 2 GB RAM ceiling that crashes the 32-bit process on modern systems.</p>
+      </article>
+
+      <article class="glass-card credit">
+        <div class="credit-tag">2.7.1</div>
+        <h3>DXVK</h3>
+        <p class="credit-by">Philip «doitsujin» Rebohle</p>
+        <p data-i18n="components.dxvk">Translates Direct3D 9 calls to Vulkan at runtime. The single biggest stability + performance boost a 2010-era PC game can get.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="install">
+    <header class="section-head">
+      <span class="section-eyebrow" data-i18n="install.eyebrow">GET STARTED</span>
+      <h2 class="section-title" data-i18n="install.title">Install in 30 seconds</h2>
+    </header>
+
+    <ol class="steps">
+      <li class="glass-card step">
+        <span class="step-num">1</span>
+        <h3 data-i18n="install.s1.title">Download</h3>
+        <p data-i18n-html="install.s1.desc">Grab the latest <code>DP1-Launcher-v*-win64.zip</code> from the Releases page.</p>
+      </li>
+      <li class="glass-card step">
+        <span class="step-num">2</span>
+        <h3 data-i18n="install.s2.title">Extract</h3>
+        <p data-i18n="install.s2.desc">Unzip anywhere — the launcher is fully portable. No installer, no admin (unless DXVK is being installed).</p>
+      </li>
+      <li class="glass-card step">
+        <span class="step-num">3</span>
+        <h3 data-i18n="install.s3.title">Run</h3>
+        <p data-i18n-html="install.s3.desc">Launch <code>DP1 Launcher.exe</code>. It finds the game in Steam, downloads everything it needs, then you press LAUNCH.</p>
+      </li>
+    </ol>
+
+    <div class="install-cta">
+      <a class="btn-launch" id="download-btn-2" href="https://github.com/LittleBitUA/DP1-Launcher/releases/latest" target="_blank" rel="noopener">
+        <span class="btn-launch-glow"></span>
+        <span class="btn-launch-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/>
+          </svg>
+        </span>
+        <span class="btn-launch-label" id="download-label-2" data-i18n="hero.download">DOWNLOAD</span>
+      </a>
+      <p class="install-note" data-i18n="install.note">Windows 10 (1803+) or Windows 11. Game must be owned and installed via Steam.</p>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <header class="section-head">
+      <span class="section-eyebrow" data-i18n="about.eyebrow">WHO MADE THIS</span>
+      <h2 class="section-title" data-i18n="about.title">About</h2>
+    </header>
+
+    <div class="glass-card about-card">
+      <p data-i18n-html="about.line1">
+        DP1 Launcher is built by <strong>Dmytro Bidlov</strong> for the
+        <span class="hl-ua">Ukrainian 🇺🇦 fan community</span> of
+        <em>Deadly Premonition</em>.
+      </p>
+      <p data-i18n="about.line2">
+        It exists because the game deserves a one-click install experience in 2026, not a wiki crawl.
+        The launcher is free, open-source, and not affiliated with Access Games, Rising Star Games, or Toybox Inc.
+      </p>
+      <p class="about-thanks" data-i18n="about.thanks">
+        Thanks to Swery (Hidetaka Suehiro) for an immortal, absurd, and heart-warming game.
+      </p>
+
+      <div class="about-links">
+        <a href="https://t.me/LittleBitUA" target="_blank" rel="noopener" class="about-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.94 4.31a1 1 0 0 0-1.37-1.05L2.62 10.34a1 1 0 0 0 .06 1.86l4.27 1.32 1.62 5.14a1 1 0 0 0 1.74.37l2.18-2.62 4.13 3.04a1 1 0 0 0 1.58-.65zM9.4 14.4l-.5 4.04 3.5-3.5z"/></svg>
+          Telegram
+        </a>
+        <a href="https://github.com/LittleBitUA/DP1-Launcher" target="_blank" rel="noopener" class="about-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.9 1.2 2 1.2 3.2 0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.youtube.com/@UA_LittleBit" target="_blank" rel="noopener" class="about-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 7.1a3 3 0 0 0-2.1-2.1C19.5 4.5 12 4.5 12 4.5s-7.5 0-9.4.5A3 3 0 0 0 .5 7.1C0 9 0 12 0 12s0 3 .5 4.9a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15 24 12 24 12s0-3-.5-4.9zM9.5 15.5v-7l6.3 3.5-6.3 3.5z"/></svg>
+          YouTube
+        </a>
+        <a href="https://steamcommunity.com/id/bidlochuk/" target="_blank" rel="noopener" class="about-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.6 2 2.2 6.1 2 11.3l5.3 2.2a3 3 0 0 1 1.7-.5h.2l2.4-3.4v-.1a4 4 0 1 1 4 4h-.1l-3.4 2.4v.2a3 3 0 0 1-5.7 1.3l-3.8-1.6C3.9 19.5 7.6 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          Steam
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p data-i18n-html="footer.line">
+      Created by <strong>Dmytro Bidlov</strong> with love from
+      <a href="https://t.me/LittleBitUA" target="_blank" rel="noopener">«Little Bit»</a> 🇺🇦
+    </p>
+    <p class="footer-disclaimer" data-i18n="footer.disclaimer">
+      Not affiliated with Access Games / Rising Star Games / Toybox Inc. All rights to the game belong to their respective owners.
+    </p>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
