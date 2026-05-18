@@ -63,6 +63,7 @@ window.SITE_I18N = {
 
     'footer.line':            'Created by <strong>Dmytro Bidlov</strong> with love from <a href="https://t.me/LittleBitUA" target="_blank" rel="noopener">«Little Bit»</a> 🇺🇦',
     'footer.disclaimer':      'Not affiliated with Access Games / Rising Star Games / Toybox Inc. All rights to the game belong to their respective owners.',
+    'ui.scrollTop':           'Scroll to top',
   },
 
   uk: {
@@ -126,5 +127,6 @@ window.SITE_I18N = {
 
     'footer.line':            'Створено <strong>Dmytro Bidlov</strong> з любов\'ю від <a href="https://t.me/LittleBitUA" target="_blank" rel="noopener">«Little Bit»</a> 🇺🇦',
     'footer.disclaimer':      'Не афілійовано з Access Games / Rising Star Games / Toybox Inc. Усі права на гру належать правовласникам.',
+    'ui.scrollTop':           'Нагору',
   },
 };

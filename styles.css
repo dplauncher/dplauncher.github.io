@@ -384,6 +384,50 @@ strong { color: #fff; }
   font-style: italic; max-width: 640px; margin: 0 auto;
 }
 
+/* ── Scroll-to-top floating button ───────────────────────────── */
+.scroll-top {
+  position: fixed;
+  right: 26px; bottom: 26px;
+  z-index: 60;
+  width: 48px; height: 48px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255,255,255,0.20), transparent 65%),
+    linear-gradient(180deg, var(--red-hi), var(--red));
+  border: 1px solid rgba(255,100,110,0.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.25),
+    inset 0 -1px 0 rgba(0,0,0,0.20),
+    0 8px 22px rgba(196,25,43,0.40),
+    0 0 28px rgba(196,25,43,0.22);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.85);
+  transition: opacity var(--t-med), transform var(--t-med), box-shadow var(--t-med), visibility var(--t-med);
+}
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+.scroll-top:hover {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.35),
+    0 12px 30px rgba(196,25,43,0.55),
+    0 0 40px rgba(196,25,43,0.35);
+}
+.scroll-top:active { transform: translateY(-1px) scale(1.02); }
+.scroll-top svg { width: 20px; height: 20px; }
+
+@media (max-width: 760px) {
+  .scroll-top { right: 16px; bottom: 16px; width: 44px; height: 44px; }
+  .scroll-top svg { width: 18px; height: 18px; }
+}
+
 :focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-radius: 4px; }
 button:focus:not(:focus-visible) { outline: none; }
 

@@ -74,11 +74,21 @@ function setDownloadMeta(release) {
   });
 }
 
+function setupScrollTop() {
+  const btn = document.getElementById('scroll-top');
+  if (!btn) return;
+  const update = () => btn.classList.toggle('visible', window.scrollY > 400);
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   applyLang(detectInitialLang());
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => applyLang(btn.dataset.setLang));
   });
+  setupScrollTop();
   const release = await fetchLatestRelease();
   setDownloadMeta(release);
 });
