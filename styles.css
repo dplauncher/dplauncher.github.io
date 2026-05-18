@@ -28,7 +28,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html, body {
+html {
   background: var(--bg-0);
   color: var(--text);
   font-family: var(--font);
@@ -37,6 +37,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
 }
+body { background: transparent; min-height: 100vh; position: relative; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
 code {
@@ -50,12 +51,14 @@ code {
 em { color: var(--red-hi); font-style: normal; }
 strong { color: #fff; }
 
-.bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.bg { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
 .bg-image {
   position: absolute; inset: 0;
-  background: url('bg.jpg') center 30% / cover no-repeat;
+  background: url('bg.jpg') center 35% / cover no-repeat #07080b;
   filter: brightness(0.55) saturate(0.92);
 }
+/* All page content sits above the fixed background */
+.topbar, .hero, .section, .footer { position: relative; z-index: 1; }
 .bg-rain {
   position: absolute; inset: 0;
   background: repeating-linear-gradient(105deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 3px);
