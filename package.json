@@ -1,0 +1,19 @@
+{
+  "name": "dplauncher.github.io",
+  "version": "1.1.0",
+  "description": "Marketing site for DP1 Launcher — Deadly Premonition: The Director's Cut Fan Launcher.",
+  "private": true,
+  "scripts": {
+    "render-og": "node og-render.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dplauncher/dplauncher.github.io.git"
+  },
+  "author": "Dmytro Bidlov (Little Bit)",
+  "license": "MIT",
+  "homepage": "https://dplauncher.github.io/",
+  "devDependencies": {
+    "puppeteer": "^25.1.0"
+  }
+}
